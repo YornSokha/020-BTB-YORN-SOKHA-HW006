@@ -84,19 +84,19 @@ btn.addEventListener("click", () => {
     let str = btn.innerHTML.toString();
     if (str.substr(str.length - 1) == "t") {
         start();
-        btn.classList.remove("btn-success");
-        btn.className += " btn-danger";
+        btn.classList.remove("btn-outline-success");
+        btn.className += " btn-outline-danger";
         btn.innerHTML = '<i class="far fa-stop-circle"></i> Stop';
     } else if (str.substr(str.length - 1) == "p") {
         stop();
 
-        btn.classList.remove("btn-danger");
-        btn.classList += " btn-primary";
+        btn.classList.remove("btn-outline-danger");
+        btn.classList += " btn-outline-primary";
         btn.innerHTML = '<i class="fas fa-trash"></i> Clear';
     } else if (str.substr(str.length - 1) == "r") {
         init();
-        btn.classList.remove("btn-primary");
-        btn.classList += " btn-success";
+        btn.classList.remove("btn-outline-primary");
+        btn.classList += " btn-outline-success";
         btn.innerHTML = '<i class="far fa-play-circle"></i> Start';
     }
 });
